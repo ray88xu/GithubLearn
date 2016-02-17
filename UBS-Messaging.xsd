@@ -159,7 +159,7 @@
 	</xs:complexType>
 	<xs:complexType name="WARNINGDETAILSType">
 		<xs:sequence>
-			<xs:element name="WCODE" type="xs:string" />
+			<xs:element name="WCOD" type="xs:string" />
 			<xs:element name="WDESC" type="xs:string" />
 		</xs:sequence>
 	</xs:complexType>

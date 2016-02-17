@@ -1,0 +1,428 @@
+<?xml version= "1.0" encoding="UTF-8"?>
+ <wsdl:definitions name="COCustomerService" 
+ targetNamespace = "http://cocustomerservice.ws.elcm.ofss.com"
+ xmlns:tns = "http://cocustomerservice.ws.elcm.ofss.com"
+ xmlns:wsdlsoap = "http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:wsdl = "http://schemas.xmlsoap.org/wsdl/"
+ xmlns:xs = "http://www.w3.org/2001/XMLSchema"
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:ns="http://fcubs.ofss.com/service/COCustomerService">
+
+<wsdl:types>
+   <xs:schema>
+      <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+       schemaLocation="CO-AuthorizeCustomer-Req-Full-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+           schemaLocation="CO-AuthorizeCustomer-Res-Full-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-AuthorizeCustomer-Req-IO-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+         <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-AuthorizeCustomer-Res-PK-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+      <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+       schemaLocation="CO-CloseCustomer-Req-Full-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+           schemaLocation="CO-CloseCustomer-Res-Full-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-CloseCustomer-Req-IO-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+         <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-CloseCustomer-Res-PK-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+      <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+       schemaLocation="CO-CreateCustomer-Req-Full-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+           schemaLocation="CO-CreateCustomer-Res-Full-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-CreateCustomer-Req-IO-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+         <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-CreateCustomer-Res-PK-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+      <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+       schemaLocation="CO-DeleteCustomer-Req-Full-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+           schemaLocation="CO-DeleteCustomer-Res-Full-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-DeleteCustomer-Req-IO-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+         <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-DeleteCustomer-Res-PK-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+      <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+       schemaLocation="CO-ModifyCustomer-Req-Full-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+           schemaLocation="CO-ModifyCustomer-Res-Full-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-ModifyCustomer-Req-IO-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+         <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-ModifyCustomer-Res-PK-MSG.xsd"/>
+    </xs:schema>
+    <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+           schemaLocation="CO-QueryCustomer-Res-Full-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-QueryCustomer-Req-IO-MSG.xsd"/>
+   </xs:schema>
+   <xs:schema>
+      <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+       schemaLocation="CO-ReopenCustomer-Req-Full-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+           schemaLocation="CO-ReopenCustomer-Res-Full-MSG.xsd"/>
+    </xs:schema>
+   <xs:schema>
+          <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-ReopenCustomer-Req-IO-MSG.xsd"/>
+   </xs:schema>
+    <xs:schema>
+         <xs:import namespace="http://fcubs.ofss.com/service/COCustomerService"
+          schemaLocation="CO-ReopenCustomer-Res-PK-MSG.xsd"/>
+    </xs:schema>
+</wsdl:types>
+
+<wsdl:message name="AuthorizeCustomerFSReq">
+    <wsdl:part name="RequestMsg" element="ns:AUTHORIZECUSTOMER_FSFS_REQ"/>
+</wsdl:message>
+ 
+<wsdl:message name="AuthorizeCustomerFSRes">
+    <wsdl:part name="ResponseMsg" element="ns:AUTHORIZECUSTOMER_FSFS_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="AuthorizeCustomerIOReq">
+    <wsdl:part name="RequestMsg" element="ns:AUTHORIZECUSTOMER_IOPK_REQ"/>
+</wsdl:message> 
+
+<wsdl:message name="AuthorizeCustomerPKRes">
+    <wsdl:part name="ResponseMsg" element="ns:AUTHORIZECUSTOMER_IOPK_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="CloseCustomerFSReq">
+    <wsdl:part name="RequestMsg" element="ns:CLOSECUSTOMER_FSFS_REQ"/>
+</wsdl:message>
+ 
+<wsdl:message name="CloseCustomerFSRes">
+    <wsdl:part name="ResponseMsg" element="ns:CLOSECUSTOMER_FSFS_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="CloseCustomerIOReq">
+    <wsdl:part name="RequestMsg" element="ns:CLOSECUSTOMER_IOPK_REQ"/>
+</wsdl:message> 
+
+<wsdl:message name="CloseCustomerPKRes">
+    <wsdl:part name="ResponseMsg" element="ns:CLOSECUSTOMER_IOPK_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="CreateCustomerFSReq">
+    <wsdl:part name="RequestMsg" element="ns:CREATECUSTOMER_FSFS_REQ"/>
+</wsdl:message>
+ 
+<wsdl:message name="CreateCustomerFSRes">
+    <wsdl:part name="ResponseMsg" element="ns:CREATECUSTOMER_FSFS_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="CreateCustomerIOReq">
+    <wsdl:part name="RequestMsg" element="ns:CREATECUSTOMER_IOPK_REQ"/>
+</wsdl:message> 
+
+<wsdl:message name="CreateCustomerPKRes">
+    <wsdl:part name="ResponseMsg" element="ns:CREATECUSTOMER_IOPK_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="DeleteCustomerFSReq">
+    <wsdl:part name="RequestMsg" element="ns:DELETECUSTOMER_FSFS_REQ"/>
+</wsdl:message>
+ 
+<wsdl:message name="DeleteCustomerFSRes">
+    <wsdl:part name="ResponseMsg" element="ns:DELETECUSTOMER_FSFS_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="DeleteCustomerIOReq">
+    <wsdl:part name="RequestMsg" element="ns:DELETECUSTOMER_IOPK_REQ"/>
+</wsdl:message> 
+
+<wsdl:message name="DeleteCustomerPKRes">
+    <wsdl:part name="ResponseMsg" element="ns:DELETECUSTOMER_IOPK_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="ModifyCustomerFSReq">
+    <wsdl:part name="RequestMsg" element="ns:MODIFYCUSTOMER_FSFS_REQ"/>
+</wsdl:message>
+ 
+<wsdl:message name="ModifyCustomerFSRes">
+    <wsdl:part name="ResponseMsg" element="ns:MODIFYCUSTOMER_FSFS_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="ModifyCustomerIOReq">
+    <wsdl:part name="RequestMsg" element="ns:MODIFYCUSTOMER_IOPK_REQ"/>
+</wsdl:message> 
+
+<wsdl:message name="ModifyCustomerPKRes">
+    <wsdl:part name="ResponseMsg" element="ns:MODIFYCUSTOMER_IOPK_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="QueryCustomerFSRes">
+    <wsdl:part name="ResponseMsg" element="ns:QUERYCUSTOMER_IOFS_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="QueryCustomerIOReq">
+    <wsdl:part name="RequestMsg" element="ns:QUERYCUSTOMER_IOFS_REQ"/>
+</wsdl:message> 
+
+<wsdl:message name="ReopenCustomerFSReq">
+    <wsdl:part name="RequestMsg" element="ns:REOPENCUSTOMER_FSFS_REQ"/>
+</wsdl:message>
+ 
+<wsdl:message name="ReopenCustomerFSRes">
+    <wsdl:part name="ResponseMsg" element="ns:REOPENCUSTOMER_FSFS_RES"/>
+</wsdl:message> 
+
+<wsdl:message name="ReopenCustomerIOReq">
+    <wsdl:part name="RequestMsg" element="ns:REOPENCUSTOMER_IOPK_REQ"/>
+</wsdl:message> 
+
+<wsdl:message name="ReopenCustomerPKRes">
+    <wsdl:part name="ResponseMsg" element="ns:REOPENCUSTOMER_IOPK_RES"/>
+</wsdl:message> 
+
+<wsdl:portType name="COCustomerServiceSEI" > 
+  <wsdl:operation name="AuthorizeCustomerFS">
+       <wsdl:input message="tns:AuthorizeCustomerFSReq"/>
+       <wsdl:output message="tns:AuthorizeCustomerFSRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="AuthorizeCustomerIO">
+       <wsdl:input message="tns:AuthorizeCustomerIOReq"/>
+       <wsdl:output message="tns:AuthorizeCustomerPKRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="CloseCustomerFS">
+       <wsdl:input message="tns:CloseCustomerFSReq"/>
+       <wsdl:output message="tns:CloseCustomerFSRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="CloseCustomerIO">
+       <wsdl:input message="tns:CloseCustomerIOReq"/>
+       <wsdl:output message="tns:CloseCustomerPKRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="CreateCustomerFS">
+       <wsdl:input message="tns:CreateCustomerFSReq"/>
+       <wsdl:output message="tns:CreateCustomerFSRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="CreateCustomerIO">
+       <wsdl:input message="tns:CreateCustomerIOReq"/>
+       <wsdl:output message="tns:CreateCustomerPKRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="DeleteCustomerFS">
+       <wsdl:input message="tns:DeleteCustomerFSReq"/>
+       <wsdl:output message="tns:DeleteCustomerFSRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="DeleteCustomerIO">
+       <wsdl:input message="tns:DeleteCustomerIOReq"/>
+       <wsdl:output message="tns:DeleteCustomerPKRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="ModifyCustomerFS">
+       <wsdl:input message="tns:ModifyCustomerFSReq"/>
+       <wsdl:output message="tns:ModifyCustomerFSRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="ModifyCustomerIO">
+       <wsdl:input message="tns:ModifyCustomerIOReq"/>
+       <wsdl:output message="tns:ModifyCustomerPKRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="QueryCustomerIO">
+       <wsdl:input message="tns:QueryCustomerIOReq"/>
+       <wsdl:output message="tns:QueryCustomerFSRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="ReopenCustomerFS">
+       <wsdl:input message="tns:ReopenCustomerFSReq"/>
+       <wsdl:output message="tns:ReopenCustomerFSRes"/>
+  </wsdl:operation>
+
+  <wsdl:operation name="ReopenCustomerIO">
+       <wsdl:input message="tns:ReopenCustomerIOReq"/>
+       <wsdl:output message="tns:ReopenCustomerPKRes"/>
+  </wsdl:operation>
+
+</wsdl:portType>
+
+<wsdl:binding name="COCustomerService" type="tns:COCustomerServiceSEI">
+ <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+ <wsdl:operation name="AuthorizeCustomerFS">
+     <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+            <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+         <wsdl:output>
+            <wsdlsoap:body use="literal"/>
+     </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="AuthorizeCustomerIO">
+      <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+           <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+       <wsdl:output>
+           <wsdlsoap:body use="literal"/>
+       </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="CloseCustomerFS">
+     <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+            <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+         <wsdl:output>
+            <wsdlsoap:body use="literal"/>
+     </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="CloseCustomerIO">
+      <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+           <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+       <wsdl:output>
+           <wsdlsoap:body use="literal"/>
+       </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="CreateCustomerFS">
+     <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+            <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+         <wsdl:output>
+            <wsdlsoap:body use="literal"/>
+     </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="CreateCustomerIO">
+      <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+           <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+       <wsdl:output>
+           <wsdlsoap:body use="literal"/>
+       </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="DeleteCustomerFS">
+     <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+            <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+         <wsdl:output>
+            <wsdlsoap:body use="literal"/>
+     </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="DeleteCustomerIO">
+      <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+           <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+       <wsdl:output>
+           <wsdlsoap:body use="literal"/>
+       </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="ModifyCustomerFS">
+     <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+            <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+         <wsdl:output>
+            <wsdlsoap:body use="literal"/>
+     </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="ModifyCustomerIO">
+      <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+           <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+       <wsdl:output>
+           <wsdlsoap:body use="literal"/>
+       </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="QueryCustomerIO">
+      <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+           <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+       <wsdl:output>
+           <wsdlsoap:body use="literal"/>
+       </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="ReopenCustomerFS">
+     <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+            <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+         <wsdl:output>
+            <wsdlsoap:body use="literal"/>
+     </wsdl:output>
+ </wsdl:operation>
+
+ <wsdl:operation name="ReopenCustomerIO">
+      <wsdlsoap:operation soapAction=""/>
+         <wsdl:input>
+           <wsdlsoap:body use="literal"/>
+         </wsdl:input>
+       <wsdl:output>
+           <wsdlsoap:body use="literal"/>
+       </wsdl:output>
+ </wsdl:operation>
+
+</wsdl:binding>
+
+ <wsdl:service name="COCustomerService">
+		<wsdl:port name="COCustomerServiceSEI" binding="tns:COCustomerService">
+			<wsdlsoap:address location="http://localhost:7101/ELCMWeb/COCustomerService"/>
+		</wsdl:port>
+</wsdl:service></wsdl:definitions>

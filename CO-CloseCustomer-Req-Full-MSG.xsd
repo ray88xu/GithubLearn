@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://fcubs.ofss.com/service/COCustomerService" targetNamespace="http://fcubs.ofss.com/service/COCustomerService" elementFormDefault="qualified">
+   <xs:include schemaLocation="UBS-Messaging.xsd"/>
+   <xs:include schemaLocation="CO-Customer-Types.xsd"/>
+   <xs:element name="CLOSECUSTOMER_FSFS_REQ">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="FCUBS_HEADER" type="FCUBS_HEADERType"/>
+            <xs:element name="FCUBS_BODY">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">This XSD Gives Information about Full Request 
+                        </xs:documentation>
+                     </xs:annotation>
+                     <xs:element name="Customer-Full" type="Customer-Full-Type"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

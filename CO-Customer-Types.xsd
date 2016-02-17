@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="SubSys-Fields.xsd" />
+	<xs:complexType name="Customer-PK-Type">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer-Full-Type">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="GROUP_CODE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNADVISED">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FAX_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CRM_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ISSUER_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="TREASURY_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CUSTOMER_TYPE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="B" />
+						<xs:enumeration value="C" />
+						<xs:enumeration value="I" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CUSTOMER_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="ADDRESS_LINE1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE3">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE2">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE4">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="COUNTRY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="SHORT_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="NATIONALITY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="LANGUAGE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="EXPOSURE_COUNTRY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="LOCAL_BRANCH">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNIQUE_ID_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNIQUE_ID_VALUE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FROZEN">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="DECEASED">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="CUSTOMER_CATEGORY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CREDIT_RATING">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="REVISION_DATE" type="xs:date" />
+			<xs:element minOccurs="0" name="SSN">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="11" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="LOCATION_CODE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="SHORT_NAME2">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FULL_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="EXT_REFERENCE_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MAKER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MAKERSTAMP">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CHECKER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CHECKERSTAMP">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MODNO" type="xs:decimal" />
+			<xs:element minOccurs="0" name="TXNSTAT">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="AUTHSTAT">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="Customer-Source-Details">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="SOURCE_CODE">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="35" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element minOccurs="0" name="SOURCE_CUSTOMER_NUMBER">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="9" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="UDFDETAILS" type="UDFDETAILSType2" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer-Query-IO-Type">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer-Create-IO-Type">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="GROUP_CODE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNADVISED">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FAX_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CRM_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ISSUER_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="TREASURY_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CUSTOMER_TYPE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="B" />
+						<xs:enumeration value="C" />
+						<xs:enumeration value="I" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CUSTOMER_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="ADDRESS_LINE1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE3">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE2">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE4">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="COUNTRY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="SHORT_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="NATIONALITY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="LANGUAGE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="EXPOSURE_COUNTRY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNIQUE_ID_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNIQUE_ID_VALUE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FROZEN">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="DECEASED">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="CUSTOMER_CATEGORY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CREDIT_RATING">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="REVISION_DATE" type="xs:date" />
+			<xs:element minOccurs="0" name="SSN">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="11" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="LOCATION_CODE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="SHORT_NAME2">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FULL_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="EXT_REFERENCE_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="Customer-Source-Details">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="SOURCE_CODE">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="35" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element minOccurs="0" name="SOURCE_CUSTOMER_NUMBER">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="9" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="UDFDETAILS" type="UDFDETAILSType2" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer-Modify-IO-Type">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="GROUP_CODE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="EXPOSURE_CATEGORY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CUSTOMER_CLASSIFICATION">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNADVISED">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FAX_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CRM_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ISSUER_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="TREASURY_CUSTOMER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CUSTOMER_TYPE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="B" />
+						<xs:enumeration value="C" />
+						<xs:enumeration value="I" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CUSTOMER_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE3">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE2">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ADDRESS_LINE4">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="COUNTRY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="SHORT_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="NATIONALITY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="LANGUAGE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="EXPOSURE_COUNTRY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="LOCAL_BRANCH">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNIQUE_ID_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="UNIQUE_ID_VALUE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FROZEN">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="DECEASED">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y" />
+						<xs:enumeration value="N" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="WHEREABOUTS_UNKOWN">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CUSTOMER_CATEGORY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CREDIT_RATING">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="REVISION_DATE" type="xs:date" />
+			<xs:element minOccurs="0" name="SSN">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="11" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="LOCATION_CODE">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="SHORT_NAME2">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="FULL_NAME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="105" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MAKER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MAKERSTAMP">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="UDFDETAILS" type="UDFDETAILSType2" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer-Authorize-IO-Type">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CHECKER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="CHECKERSTAMP">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MODNO" type="xs:decimal" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer-Delete-IO-Type">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer-Close-IO-Type">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MAKER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MAKERSTAMP">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MODNO" type="xs:decimal" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer-Reopen-IO-Type">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="CUSTOMER_NUMBER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MAKER">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MAKERSTAMP">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="MODNO" type="xs:decimal" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
